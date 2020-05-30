@@ -9,7 +9,6 @@ environment:
   GYP_MSVS_VERSION: 2017
   PDFium_BRANCH: $(APPVEYOR_REPO_TAG_NAME)
   matrix:
-    - PDFium_V8: enabled
     - PDFium_V8: disabled
 
 configuration:
@@ -17,7 +16,6 @@ configuration:
 
 platform:
   - x86
-  - x64
 
 build_script:
   - call build.bat
